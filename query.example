@@ -1,0 +1,51 @@
+ 
+mutation CreateEmployee {
+  CreateEmployee(
+    input: {
+      name: "Hema",
+      email: "hema@go.dev",
+      mobile: "9876543210"
+    }
+  ) {
+    id,
+    name,
+    email,
+    mobile
+  }
+}
+
+mutation UpdateEmployee {
+  UpdateEmployee(
+    id: 5,
+    input: {
+      name: "Test",
+      email: "hema@go.dev",
+      mobile: "9876543210"
+    }
+  ) 
+}
+
+mutation DeleteEmployee {
+  DeleteEmployee(
+    id: 5
+  ) 
+}
+
+
+
+query GetEmployees{
+  GetEmployees{
+    id,
+    name,
+    email
+  }
+}
+
+query GetEmployee{
+  GetEmployee(id:2){
+    id,
+    name,
+    email,
+    mobile
+  }
+}
